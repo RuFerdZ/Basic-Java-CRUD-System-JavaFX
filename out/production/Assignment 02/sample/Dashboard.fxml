@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Dashboard">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="31.0" prefWidth="600.0" style="-fx-background-color: #95a5a6;">
+         <children>
+            <Button fx:id="menuCustomer" mnemonicParsing="false" onAction="#loadCustomerPane" prefHeight="31.0" prefWidth="77.0" text="Customer" />
+            <Button fx:id="menuEmployee" layoutX="77.0" mnemonicParsing="false" onAction="#loadEmpPane" prefHeight="31.0" prefWidth="77.0" text="Employee" />
+            <Button fx:id="menuContract" layoutX="154.0" mnemonicParsing="false" onAction="#loadContractPane" prefHeight="31.0" prefWidth="77.0" text="Contract" />
+            <Button fx:id="menuRoles" layoutX="231.0" mnemonicParsing="false" onAction="#loadRolePane" prefHeight="31.0" prefWidth="56.0" text="Role" />
+            <Button fx:id="menuHelp" layoutX="523.0" mnemonicParsing="false" onAction="#loadHelpPane" prefHeight="31.0" prefWidth="77.0" text="About us" AnchorPane.rightAnchor="0.0" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="loginAP" prefHeight="496.0" prefWidth="600.0">
+         <children>
+            <Pane fx:id="loginPane" prefHeight="541.0" prefWidth="600.0" style="-fx-background-color: white;">
+               <children>
+                  <Button fx:id="loginbtn" layoutX="121.0" layoutY="337.0" mnemonicParsing="false" onAction="#loadScreen" text="Login">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txtusername" layoutX="238.0" layoutY="193.0" promptText="Enter username">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="194.0" layoutY="83.0" prefHeight="89.0" prefWidth="336.0" text="LOGIN">
+                     <font>
+                        <Font name="Bauhaus 93" size="76.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4888888888888889" centerY="0.5" focusAngle="-108.43" radius="1.0">
+                           <stops>
+                              <Stop color="#59b3d7a6" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+                  <Label layoutX="84.0" layoutY="200.0" text="Username :">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="87.0" layoutY="253.0" text="Password :">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="txtpassword" layoutX="238.0" layoutY="246.0" promptText="Enter password">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </PasswordField>
+                  <Button fx:id="exitbtn" layoutX="332.0" layoutY="337.0" mnemonicParsing="false" onAction="#exitProgram" text="Exit">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="31.0" prefHeight="460.0" prefWidth="600.0" AnchorPane.bottomAnchor="-31.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
+         <children>
+            <Pane fx:id="aboutPane" prefHeight="480.0" prefWidth="641.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="42.0" text="Basic CRUD System" textFill="#3b685e">
+                     <font>
+                        <Font name="Bauhaus 93" size="50.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="127.0" text="Latest release : 01/04/2019" />
+                  <Label layoutX="452.0" layoutY="75.0" text="V 1.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="228.0" layoutY="419.0" text="Designer and Developer : Rusiru Fernando" textFill="#b92626">
+                     <font>
+                        <Font name="System Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink layoutX="229.0" layoutY="198.0" text="Website :  www.basicCRUD.com" textFill="#6549cd" />
+                  <Hyperlink layoutX="223.0" layoutY="239.0" text="Email : rusirufdo@basicCRUD.com" textFill="#6549cd" />
+                  <Button fx:id="changeCredentials" layoutX="32.0" layoutY="152.0" mnemonicParsing="false" onAction="#changeLogin" prefHeight="36.0" prefWidth="234.0" text="Change Username &amp; Password">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="customerPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1abc9c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextField fx:id="txtCusConID" layoutX="203.0" layoutY="338.0" prefHeight="23.0" prefWidth="286.0" promptText="ex - con001" />
+                  <Label layoutX="117.0" layoutY="78.0" text="Customer ID : " />
+                  <TextField fx:id="txtCusID" layoutX="203.0" layoutY="75.0" prefHeight="23.0" prefWidth="286.0" promptText="ex - cus001" />
+                  <TextArea fx:id="txtCusAddress" layoutX="203.0" layoutY="242.0" prefHeight="78.0" prefWidth="286.0" promptText="Number ,  Street ,  Town" />
+                  <TextField fx:id="txtCusFname" layoutX="203.0" layoutY="120.0" prefHeight="23.0" prefWidth="286.0" promptText="Enter first name" />
+                  <TextField fx:id="txtCusLname" layoutX="203.0" layoutY="163.0" prefHeight="23.0" prefWidth="286.0" promptText="Enter last name" />
+                  <TextField fx:id="txtCusNo" layoutX="203.0" layoutY="201.0" prefHeight="23.0" prefWidth="286.0" promptText="(+xx)xxx-xxx-xxx" />
+                  <Label layoutX="129.0" layoutY="123.0" text="First name :" />
+                  <Label layoutX="141.0" layoutY="243.0" text="Address :" />
+                  <Label layoutX="138.0" layoutY="166.0" text="Surname :" />
+                  <Label layoutX="84.0" layoutY="204.0" text="Telephone number : " />
+                  <Label layoutX="154.0" layoutY="11.0" text="Customer Menu">
+                     <font>
+                        <Font name="System Bold" size="39.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="cusAddBtn" layoutX="49.0" layoutY="388.0" mnemonicParsing="false" onAction="#addCus" prefHeight="52.0" prefWidth="96.0" text="ADD" />
+                  <Button fx:id="cusViewBtn" layoutX="151.0" layoutY="388.0" mnemonicParsing="false" onAction="#viewCus" prefHeight="52.0" prefWidth="96.0" text="VIEW" />
+                  <Button fx:id="cusUpBtn" layoutX="252.0" layoutY="388.0" mnemonicParsing="false" onAction="#upCus" prefHeight="52.0" prefWidth="96.0" text="UPDATE" />
+                  <Button fx:id="cusDelbtn" layoutX="354.0" layoutY="388.0" mnemonicParsing="false" onAction="#delCus" prefHeight="52.0" prefWidth="96.0" text="DELETE" />
+                  <Button fx:id="cusResetBtn" layoutX="455.0" layoutY="388.0" mnemonicParsing="false" onAction="#resetCus" prefHeight="52.0" prefWidth="96.0" text="RESET" />
+                  <Label layoutX="126.0" layoutY="341.0" text="Contract ID :" />
+               </children>
+            </Pane>
+            <Pane fx:id="rolePane" prefHeight="480.0" prefWidth="641.0" style="-fx-background-color: #9b59b6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextField fx:id="txtRoleID" editable="false" layoutX="290.0" layoutY="171.0" prefHeight="23.0" prefWidth="202.0" promptText="ex - rol001" />
+                  <TextField fx:id="txtHourlyPay" layoutX="290.0" layoutY="225.0" prefHeight="23.0" prefWidth="202.0" promptText="\$xxx.xx" />
+                  <ComboBox fx:id="roleCombo" layoutX="287.0" layoutY="116.0" prefHeight="21.0" prefWidth="202.0" promptText="choose role" />
+                  <Label layoutX="175.0" layoutY="119.0" text="Role name :" />
+                  <Label layoutX="193.0" layoutY="174.0" text="Role ID :" />
+                  <Label layoutX="175.0" layoutY="228.0" text="Hourly Pay :" />
+                  <Label layoutX="182.0" layoutY="20.0" text="Role menu" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font name="Bell MT Bold" size="50.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="roleAdd" layoutX="162.0" layoutY="321.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="78.0" text="ADD" />
+                  <Button fx:id="roleUpdate" layoutX="375.0" layoutY="321.0" mnemonicParsing="false" onAction="#upRole" prefHeight="48.0" prefWidth="78.0" text="UPDATE" />
+                  <Button fx:id="roleView" layoutX="269.0" layoutY="321.0" mnemonicParsing="false" onAction="#roleViewdb" prefHeight="48.0" prefWidth="78.0" text="VIEW" />
+               </children>
+            </Pane>
+            <Pane fx:id="contractPane" prefHeight="460.0" prefWidth="600.0" style="-fx-background-color: #3498db;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="143.0" layoutY="29.0" text="Contract Menu">
+                     <font>
+                        <Font name="Bauhaus 93" size="47.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="174.0" layoutY="105.0" text="Contract ID :" />
+                  <Label layoutX="155.0" layoutY="154.0" text="Contract Name :" />
+                  <Label layoutX="127.0" layoutY="201.0" text="Contract description :" />
+                  <Label layoutX="162.0" layoutY="248.0" text="Contract date :" />
+                  <Label layoutX="188.0" layoutY="294.0" text="Job Type :" />
+                  <Label layoutX="144.0" layoutY="339.0" text="Project Leader ID :" />
+                  <TextField fx:id="txtconID" layoutX="287.0" layoutY="102.0" prefHeight="23.0" prefWidth="170.0" promptText="ex - con001" />
+                  <TextField fx:id="txtconName" layoutX="287.0" layoutY="150.0" prefHeight="23.0" prefWidth="170.0" promptText="Enter name of contract" />
+                  <TextField fx:id="txtconDescription" layoutX="287.0" layoutY="198.0" prefHeight="23.0" prefWidth="170.0" promptText="about the contract" />
+                  <DatePicker fx:id="txtconDate" layoutX="287.0" layoutY="246.0" />
+                  <TextField fx:id="txtconJobType" layoutX="287.0" layoutY="291.0" prefHeight="23.0" prefWidth="170.0" promptText="Type of job" />
+                  <TextField fx:id="txtconProjLeaderID" layoutX="287.0" layoutY="335.0" prefHeight="23.0" prefWidth="170.0" promptText="ex - emp001" />
+                  <Button fx:id="conAddBtn" layoutX="29.0" layoutY="385.0" mnemonicParsing="false" onAction="#conAdd" prefHeight="48.0" prefWidth="84.0" text="ADD" />
+                  <Button fx:id="conResetBtn" layoutX="484.0" layoutY="385.0" mnemonicParsing="false" onAction="#conReset" prefHeight="48.0" prefWidth="84.0" text="RESET" />
+                  <Button fx:id="conUpBtn" layoutX="252.0" layoutY="385.0" mnemonicParsing="false" onAction="#conUp" prefHeight="48.0" prefWidth="84.0" text="UPDATE" />
+                  <Button fx:id="conViewBtn" layoutX="142.0" layoutY="385.0" mnemonicParsing="false" onAction="#conView" prefHeight="48.0" prefWidth="84.0" text="VIEW" />
+                  <Button fx:id="conDelBtn" layoutX="372.0" layoutY="385.0" mnemonicParsing="false" onAction="#conDel" prefHeight="48.0" prefWidth="84.0" text="DELETE" />
+                  <!--<Button fx:id="cusAddBtn" layoutX="31.0" layoutY="393.0" mnemonicParsing="false" onAction="#addCus" prefHeight="52.0" prefWidth="96.0" text="ADD" />-->
+                  <!--<Button fx:id="cusViewBtn" layoutX="144.0" layoutY="393.0" mnemonicParsing="false" onAction="#addCus" prefHeight="52.0" prefWidth="96.0" text="VIEW" />-->
+                  <!--<Button fx:id="cusUpdateBtn" layoutX="252.0" layoutY="393.0" mnemonicParsing="false" onAction="#addCus" prefHeight="52.0" prefWidth="96.0" text="UPDATE" />-->
+                  <!--<Button fx:id="cusDeleteBtn" layoutX="365.0" layoutY="393.0" mnemonicParsing="false" onAction="#addCus" prefHeight="52.0" prefWidth="96.0" text="DELETE" />-->
+                  <!--<Button fx:id="cusAddBtn" layoutX="478.0" layoutY="393.0" mnemonicParsing="false" onAction="#addCus" prefHeight="52.0" prefWidth="96.0" text="RESET" />-->
+               </children>
+            </Pane>
+            <Pane fx:id="credPane" prefHeight="541.0" prefWidth="600.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="52.0" layoutY="51.0" text="Change username &amp; password">
+                     <font>
+                        <Font name="Bauhaus 93" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="123.0" layoutY="111.0" text="Username :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="127.0" layoutY="149.0" text="Password :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="95.0" layoutY="279.0" text="New username  :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="103.0" layoutY="321.0" text="New password :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtOldUsername" layoutX="256.0" layoutY="111.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtNewUsername" layoutX="263.0" layoutY="279.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="txtOldPassword" layoutX="256.0" layoutY="150.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </PasswordField>
+                  <PasswordField fx:id="txtNewPassword" layoutX="263.0" layoutY="321.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </PasswordField>
+                  <PasswordField fx:id="txtConfirmPasword" layoutX="263.0" layoutY="364.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </PasswordField>
+                  <Label layoutX="75.0" layoutY="370.0" text="Confirm password :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="223.0" prefHeight="17.0" prefWidth="620.0" text="______________________________________________________________________________________________________________________________________________________________________________________________________________________" />
+                  <Button fx:id="changeCredbtn" layoutX="384.0" layoutY="421.0" mnemonicParsing="false" onAction="#changeCred" prefHeight="45.0" prefWidth="78.0" text="Change">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="resetCredbtn" layoutX="261.0" layoutY="421.0" mnemonicParsing="false" onAction="#resetCred" prefHeight="45.0" prefWidth="78.0" text="Reset">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="gobackbtn" layoutX="144.0" layoutY="421.0" mnemonicParsing="false" onAction="#goback" prefHeight="45.0" prefWidth="78.0" text="Go Back">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane prefHeight="541.0" prefWidth="600.0" style="-fx-background-color: #faba0a;">
+               <children>
+                  <Label layoutX="66.0" layoutY="177.0" prefHeight="149.0" prefWidth="464.0" text="Welcome">
+                     <font>
+                        <Font name="Bauhaus 93" size="110.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="332.0" layoutY="314.0" text="Basic CRUD System">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="486.0" layoutY="347.0" text="Version 1.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="employeePane" prefHeight="480.0" prefWidth="641.0" style="-fx-background-color: #2ecc71;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="152.0" layoutY="20.0" text="Employee Menu">
+                     <font>
+                        <Font name="Bauhaus 93" size="42.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEmpID" layoutX="244.0" layoutY="86.0" prefHeight="23.0" prefWidth="170.0" promptText="ex : emp001" />
+                  <TextField fx:id="txtEmpFname" layoutX="244.0" layoutY="125.0" prefHeight="23.0" prefWidth="170.0" promptText="Enter first name" />
+                  <TextField fx:id="txtEmpLname" layoutX="244.0" layoutY="164.0" prefHeight="23.0" prefWidth="170.0" promptText="Enter last name" />
+                  <TextField fx:id="txtEmpPhone" layoutX="244.0" layoutY="236.0" prefHeight="23.0" prefWidth="170.0" promptText="(+xx)xxx-xxx-xxx" />
+                  <TextArea fx:id="txtEmpAddress" layoutX="245.0" layoutY="272.0" prefHeight="70.0" prefWidth="258.0" promptText="Number,  Street,  town" />
+                  <Button fx:id="addEmpbtn" layoutX="38.0" layoutY="398.0" mnemonicParsing="false" onAction="#addEmp" prefHeight="48.0" prefWidth="75.0" text="ADD" />
+                  <Button fx:id="viewEmpBtn" layoutX="152.0" layoutY="398.0" mnemonicParsing="false" onAction="#viewEmp" prefHeight="48.0" prefWidth="75.0" text="VIEW" />
+                  <Button fx:id="upEmpbtn" layoutX="270.0" layoutY="398.0" mnemonicParsing="false" onAction="#upEmp" prefHeight="48.0" prefWidth="75.0" text="UPDATE" />
+                  <Button fx:id="delEmpbtn" layoutX="382.0" layoutY="398.0" mnemonicParsing="false" onAction="#delEmp" prefHeight="48.0" prefWidth="75.0" text="DELETE" />
+                  <Button fx:id="resetEmpbtn" layoutX="490.0" layoutY="398.0" mnemonicParsing="false" onAction="#resetEmp" prefHeight="48.0" prefWidth="75.0" text="RESET" />
+                  <Label layoutX="138.0" layoutY="89.0" text="Employee ID :" />
+                  <Label layoutX="150.0" layoutY="128.0" text="First name :" />
+                  <Label layoutX="152.0" layoutY="168.0" text="Last name :" />
+                  <Label layoutX="138.0" layoutY="203.0" text="Date of birth :" />
+                  <Label layoutX="127.0" layoutY="239.0" text="Phone number :" />
+                  <Label layoutX="162.0" layoutY="272.0" text="Address :" />
+                  <Label layoutX="169.0" layoutY="357.0" text="Role(s) :" />
+                  <DatePicker fx:id="txtEmpDOB" layoutX="244.0" layoutY="200.0" />
+                  <TextField fx:id="txtEmpRole1" layoutX="245.0" layoutY="353.0" prefHeight="23.0" prefWidth="96.0" />
+                  <TextField fx:id="txtEmpRole2" layoutX="354.0" layoutY="352.0" prefHeight="23.0" prefWidth="96.0" />
+                  <TextField fx:id="txtEmpRole3" layoutX="462.0" layoutY="352.0" prefHeight="23.0" prefWidth="96.0" />
+                  <Label fx:id="viewEmpDOB" layoutX="250.0" layoutY="198.0" prefHeight="27.0" prefWidth="139.0" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
